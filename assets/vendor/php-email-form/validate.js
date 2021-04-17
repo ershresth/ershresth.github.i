@@ -125,7 +125,7 @@
 
   function php_email_form_submit(this_form, action, data) {
     console.log(data);
-    var url="https://script.google.com/macros/s/AKfycbwHF5Ka72pFzzp6tXZej346OZRjFKUISg0k7qZGlqRdu4W_yBCQ2LoGW7eCzG7_fxkXFw/exec"
+    var url="https://script.google.com/macros/s/AKfycbzzUTHDRgVz-hfft6SbtIO1dmQ48ORhFohrJZk5TylT9bcdI2MUOQNaxq8joN7pS3spew/exec"
     
     $.ajax({
         crossDomain: true,
