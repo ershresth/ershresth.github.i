@@ -125,34 +125,17 @@
 
   function php_email_form_submit(this_form, action, data) {
     console.log(data);
-//     var url="https://script.google.com/macros/s/AKfycbxL72Az9Tdcv6aUeNO7oMnA8ES95eqtXbPE_eIhKSZ4bGwrSbnMcSEsCA/exec"
-    
-//     jQuery.ajax({
-//         crossDomain: true,
-//         url: url + '&type=' + type + '&clinicName=' + clinicName + '&userName=' + userName + '&userPhone=' + userPhone + '&userEmail=' + userEmail + '&pincode=' + pincode,
-//         method: "GET",
-//         dataType: "jsonp"
-//       });
-    
-    
+    var url="https://script.google.com/macros/s/AKfycbxL72Az9Tdcv6aUeNO7oMnA8ES95eqtXbPE_eIhKSZ4bGwrSbnMcSEsCA/exec"
     
     $.ajax({
-      type: "POST",
-      url: action,
-      data: data,
-      timeout: 40000
+        crossDomain: true,
+        url: url + '?' + data,
+        method: "GET",
+        dataType: "jsonp"
     }).done( function(msg){
-      if (msg == 'OK') {
         this_form.find('.loading').slideUp();
         this_form.find('.sent-message').slideDown();
         this_form.find("input:not(input[type=submit]), textarea").val('');
-      } else {
-        this_form.find('.loading').slideUp();
-        if(!msg) {
-          msg = 'Form submission failed and no error message returned from: ' + action + '<br>';
-        }
-        this_form.find('.error-message').slideDown().html(msg);
-      }
     }).fail( function(data){
       console.log(data);
       var error_msg = "Form submission failed!<br>";
