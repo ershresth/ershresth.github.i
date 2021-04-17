@@ -124,14 +124,15 @@
   });
 
   function php_email_form_submit(this_form, action, data) {
-    var url="https://script.google.com/macros/s/AKfycbxL72Az9Tdcv6aUeNO7oMnA8ES95eqtXbPE_eIhKSZ4bGwrSbnMcSEsCA/exec"
+    console.log(data);
+//     var url="https://script.google.com/macros/s/AKfycbxL72Az9Tdcv6aUeNO7oMnA8ES95eqtXbPE_eIhKSZ4bGwrSbnMcSEsCA/exec"
     
-    jQuery.ajax({
-        crossDomain: true,
-        url: url + '&type=' + type + '&clinicName=' + clinicName + '&userName=' + userName + '&userPhone=' + userPhone + '&userEmail=' + userEmail + '&pincode=' + pincode,
-        method: "GET",
-        dataType: "jsonp"
-      });
+//     jQuery.ajax({
+//         crossDomain: true,
+//         url: url + '&type=' + type + '&clinicName=' + clinicName + '&userName=' + userName + '&userPhone=' + userPhone + '&userEmail=' + userEmail + '&pincode=' + pincode,
+//         method: "GET",
+//         dataType: "jsonp"
+//       });
     
     
     
